@@ -2,6 +2,7 @@ function print_filename()
   local filepath = mp.get_property("path")
   local filename = mp.get_property("filename")
   local log = "Added to bookmark: " .. filepath
+  mp.osd_message("Added to bookmark ")
   print(log)
   local output = filepath
   local f = io.open(os.getenv("HOME") .. "/mpv_bookmark.txt", "a")
